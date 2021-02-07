@@ -26,10 +26,12 @@ const game = function() {
     if (+answer > botNumber) {
       alert('Загаданное число меньше');
       geussing();
-    } else if (+answer < botNumber) {
+    }
+    if (+answer < botNumber) {
       alert('Загаданное число больше');
       geussing();
-    } else if (+answer === botNumber) {
+    }
+    if (+answer === botNumber) {
       alert('Поздравляю, Вы угадали!!!');
       return;
     }
