@@ -34,12 +34,14 @@ const game = function() {
     }
 
     if (+answer > botNumber) {
-      alert('Загаданное число меньше, осталось попыток ' + --attempts);
+      alert(`Загаданное число меньше, осталось попыток ${--attempts}`);
       guessing(attempts);
-    } else if (+answer < botNumber) {
-      alert('Загаданное число больше, осталось попыток ' + --attempts);
+    }
+    if (+answer < botNumber) {
+      alert(`Загаданное число больше, осталось попыток ${--attempts}`);
       guessing(attempts);
-    } else if (+answer === botNumber) {
+    }
+    if (+answer === botNumber) {
       if (confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?')) {
         game();
       }
